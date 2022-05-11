@@ -10,13 +10,19 @@ def multiplicar_dois_numeros(num1, num2):
     return num1 * num2
 
 def dividir_dois_numeros(num1, num2):
-    return num1 / num2
+    try:
+        return num1 / num2
+    except ZeroDivisionError:
+        return 'Não é possível dividir por zero'
 
    # Calcular e testar a área de um circulo
     # Area = Pi * raio ** 2
 
 def calcular_area_do_circulo(raio):
-    return 3.1415926539 * raio ** 2
+    try:
+        return 3.14 * raio ** 2
+    except TypeError:
+        return 'Falha no calculo - Raio não é um número.'
 
 if __name__ == '__main__':
     soma = somar_dois_numeros(5,7)

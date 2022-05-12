@@ -54,7 +54,7 @@ def test_consultar_usuario():
     # Formata
     corpo_da_resposta = resposta.json()  # Formata como JSON
     print(resposta)  # Resposta Bruta         - Opcional
-    print(resposta.status_code)  # Status Code            - Opcional
+    print(resposta.status_code)  # Status Code            - Opcionaal
     print(corpo_da_resposta)
 
     # Valida

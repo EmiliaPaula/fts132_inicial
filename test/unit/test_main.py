@@ -71,7 +71,7 @@ def testar_calcular_volume_do_paralelograma(id, largura, comprimento, altura, re
     '''
 
     # Executa
-    resultado_atual = calcular_volume_do_paralelograma(int(largura), int(comprimento),int(altura))  # usando int() para transformar testo em numero
+    resultado_atual = calcular_volume_do_paralelograma(int(largura), int(comprimento), int(altura))  # usando int() para transformar testo em numero
 
     # Valida
     assert resultado_atual == int(resultado_esperado)

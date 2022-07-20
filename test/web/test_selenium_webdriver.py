@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 #2 Classes
-class Test_selenium_webdriver:
+class Test_Selenium_Webdriver:
     #Definições de Início - Executar antes do teste
     def setup_method(self, method):
         #Declarar o objeto do Selenium e instanciar como o navegador desejado

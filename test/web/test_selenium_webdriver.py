@@ -10,18 +10,23 @@ from selenium.webdriver.common.by import By
 caminho_print = 'C:/Users/emili/PycharmProjects/fts132_inicial/prints/' \
                 + datetime.now().strftime('%Y-%m-%d %H-%M-%S') + '/'
 
+
 #2 Classes
 class Test_Selenium_Webdriver:
+    primeira_vez = "S"  # Controla se é a primeira execução: S ou outra: N
 
-    def before_all(self):
-        # Criar a pasta com data e hora para guardar os prints
-        os.mkdir(caminho_print)
     #Definições de Início - Executar antes do teste
     def setup_method(self, method):
         #Declarar o objeto do Selenium e instanciar como o navegador desejado
         self.driver = webdriver.Chrome('C:/Users/emili/PycharmProjects/fts132_inicial/drivers/chrome/chromedriver.exe')
         self.driver.implicitly_wait(30)  # O Selenium irá esperar 30 segundos pelos elementos
         self.driver.maximize_window()    # Maximizar a janela do navegador
+
+        #Cria a pasta caminho_print apenas antes do 1° teste
+        try:
+            os.mkdir(caminho_print)
+        except:
+            print('A pasta já existia')
 
     #Definição de Fim - Executa depois do teste
     def teardown_method(self):
